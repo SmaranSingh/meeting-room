@@ -1,0 +1,14 @@
+.add-meeting-form {
+  padding: 12px;
+}
+
+.add-meeting-form .input-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  /* margin-bottom: 12px; */
+}
+
+.add-meeting-form .building-dropdown {
+  margin: 12px 0;
+}

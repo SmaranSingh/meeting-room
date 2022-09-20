@@ -1,10 +1,9 @@
-.page-container {
-  border: 1px solid green;
-  max-width: 640px;
-  margin: 24px auto;
+.info-box {
+  border: 1px solid black;
+  padding: 20px;
 }
 
-.primary-cta {
+.add-meeting-cta {
   text-align: center;
   background-color: #4e73be;
   width: 100%;

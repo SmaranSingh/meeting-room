@@ -1,0 +1,8 @@
+.add-room-header {
+  text-align: center;
+}
+
+.room-card {
+  border: 1px solid green;
+  padding: 12px;
+}

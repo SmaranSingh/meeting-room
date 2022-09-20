@@ -1,8 +1,13 @@
+import { ApolloProvider } from '@apollo/client';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('tests cta', () => {
+  render(
+    <ApolloProvider>
+      <App />
+    </ApolloProvider>
+  );
+  const cta = screen.getByTestId('add-meeting-btn');
+  expect(cta).toBeTruthy();
 });

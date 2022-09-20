@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+
+import { Route, BrowserRouter as Router, Routes, Navigate } from 'react-router-dom';
+
+import AddMeetingForm from './components/AddMeetingForm';
+import Homepage from './components/Homepage';
+import RoomsList from './components/RoomsList';
+import { withContext } from './AppContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/create-meeting" exact element={<AddMeetingForm />} />
+          <Route path="/create-meeting/select-room" exact element={<RoomsList />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="*" element={<Navigate to="/" replace={true} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+export default withContext(App);
